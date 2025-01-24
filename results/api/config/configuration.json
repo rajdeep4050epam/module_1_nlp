@@ -4,7 +4,25 @@
         {
             "text": "Title",
             "color": "#70DDBA"
-        }],
+        },
+        {
+            "text": "Author",
+            "color": "#FFD700"
+        },
+        {
+            "text": "Abstract",
+            "color": "#FF6347"
+        },
+        {
+            "text": "Section",
+            "color": "#4682B4"
+        },
+        {
+            "text": "Paragraph",
+            "color": "#9370DB"
+        }
+    ],
     "relations": [],
     "users_file": "/users/allowed.txt"
 }
+ 
