@@ -11,7 +11,7 @@ def test_folder_contains_results():
     all_files = os.listdir(results_dir)
     json_files = [f for f in all_files if f.endswith('.json')]
     assert json_files, "No PDF files found in the results directory."
-    assert len(json_files) >= 4, "Not enough labeled documents in directory."
+    assert len(json_files) >= 5, "Not enough labeled documents in directory."
 
 def test_json_files_have_required_labels():
     required_labels = ["Title", "Author", "Abstract", "Section", "Paragraph"]
