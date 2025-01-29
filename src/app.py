@@ -13,13 +13,18 @@ OUTPUT_DIR = BASE_DIR / "results"
 def process_file_plain_text(file_path):
     try:
         page_texts = []
+        
         # Convert PDF to images
         images = convert_from_path(str(file_path))
-        for image in images:
+        
+        for page_num, image in enumerate(images, start=1):
             # Perform OCR on each image
             text = pytesseract.image_to_string(image)
+            
+            # Append results of each page to page_texts list
+            page_texts.append(f"Page {page_num}:")
             page_texts.append(text)
-
+            
         # Save results to output folder
         result_file = Path(OUTPUT_DIR) / f"{file_path.stem}.txt"
         with open(result_file, "w", encoding='utf-8') as f:
